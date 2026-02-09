@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI News Dashboard - Stay updated with the latest AI news from top newsletters">
+
+  <title>AI News Dashboard | Latest AI Intelligence</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo-transparent.png" type="image/png">
+</head>
+
+<body>
+  <!-- Background Effects -->
+  <div class="bg-gradient" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="header__logo">
+        <span class="header__logo-icon">
+          <img src="logo-transparent.png" alt="JG Logo">
+        </span>
+        <h1 class="header__title">AI News</h1>
+      </div>
+
+      <div class="header__stats">
+        <div class="stat">
+          <span class="stat__label">Total</span>
+          <span class="stat__value" id="total-count">--</span>
+        </div>
+        <div class="stat stat--new">
+          <span class="stat__value" id="new-count">--</span>
+          <span class="stat__label">new today</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" id="saved-count">0</span>
+          <span class="stat__label">saved</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Navigation / Filters -->
+    <nav class="nav">
+      <div class="nav__tabs">
+        <button class="nav__tab nav__tab--active" data-filter="all">All Articles</button>
+        <button class="nav__tab" data-filter="new">New Today</button>
+        <button class="nav__tab" data-filter="saved">Saved</button>
+      </div>
+
+      <div class="nav__sources" id="source-filters">
+        <!-- Dynamically populated -->
+      </div>
+    </nav>
+
+    <!-- Articles Grid -->
+    <section class="articles" id="articles-grid">
+      <!-- Loading State -->
+      <div class="loading">
+        <div class="loading__spinner"></div>
+        <span>Loading articles...</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Last updated: <span id="last-updated">--</span> • Auto-refreshes every 24 hours</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="flow-field.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

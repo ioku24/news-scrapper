@@ -1,0 +1,23 @@
+Colors
+Primary:
+#90B8F0
+Accent:
+#FFFFFF
+Background:
+#0F1011
+Text Primary:
+#0F1011
+Link:
+#195F97
+Fonts
+Arial(body)
+Roboto Mono(monospace)
+Suisseintl(heading)
+Lyondisplay App(display)
+Georgia(body)
+Typography
+primary: Arial
+heading: Suisseintl
+h1: 96px
+h2: 80px
+body: 12px
